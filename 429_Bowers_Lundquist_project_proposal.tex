@@ -1,0 +1,70 @@
+\documentclass[12pt]{article}
+
+\usepackage{fancyhdr}
+\usepackage[pdftex]{graphicx}
+%\usepackage{amsmath}
+%\usepackage{amsfonts}
+%\usepackage{amsthm}
+\usepackage[export]{adjustbox}
+\usepackage[useregional]{datetime2}
+\usepackage{verbatim}
+\usepackage{mathtools}% http://ctan.org/pkg/mathtools
+
+% Formatting Commands
+\newcommand{\mytitle}[1]{\Huge{\bf{#1}}}
+\newcommand{\myheading}[1]{\Large{\bf{#1}}}
+\newcommand{\mycallout}[1]{\underline{\textbf{#1}}}
+\newcommand{\mymatrix}{\textbf}
+\newcommand{\myvec}{\underline}
+% Command Abbreviations
+\newcommand{\mm}{\mymatrix}
+\newcommand{\mv}{\myvec}
+\setlength{\topmargin}{-.50in}
+\setlength{\oddsidemargin}{-.20in}
+\setlength{\textheight}{9.0in}
+\setlength{\textwidth}{6.73in}
+\setlength{\evensidemargin}{.00in}
+\setlength{\parindent}{0in}
+
+\pagestyle{fancy}
+\fancyhf{}
+\rhead{STAT-429 - Project Proposal}
+\cfoot{\thepage}
+ 
+\begin{document}
+
+{\myheading {Proposed Title}} 
+
+Jump Diffusion with a Heterogeneous Poisson Processes
+
+\bigskip
+
+{\myheading {Names of each project member}}
+
+Jesse Bowers, David Lundquist
+
+\bigskip
+
+
+{\myheading {Problem Statement}}
+
+In traditional jump diffusion models, it is assumed that at no point in time is a jump more likely than at any other point.  In my practical applications, this assumption is inappropriate.  For example, publicly traded equities with quarterly earnings calls naturally have atypical behavior prior to, at, and after those earnings calls.  In this inquiry, we relax the traditional assumption that $n_{t}$ is a homogeneous Poisson process by taking $n_{t}$ to be Poisson-distributed with time-varying rate parameter $\lambda(t)$, a monotone increasing function of time.
+
+\bigskip
+
+
+{\myheading {Expected Outcome}} \\
+Our objectives include:
+\begin{itemize}  
+\item Build one model with a parametric $\lambda(t)$
+\item Build one model with a one nonparametric $\lambda(t)$
+\item For each of the model built, test each on an artificial data set
+\item For each of the model built, test each on an real-world financial data set
+
+\end{itemize}
+
+\bigskip
+
+
+
+\end{document}
